@@ -18,7 +18,7 @@ resource "aws_iam_role" "sample_role" {
 }
 
 resource "aws_s3_bucket" "sample_bucket" {
-  bucket        = "sample-bucket-${data.aws_caller_identity.current}"
+  bucket        = "sample-bucket-${data.aws_caller_identity.current.id}"
   force_destroy = "true"
 }
 
